@@ -174,7 +174,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
                   } transition-colors duration-200`}
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Live Demo
+                  Visit Project
                 </motion.a>
               </div>
             </motion.div>
