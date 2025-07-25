@@ -6,6 +6,7 @@ import { Sun, Moon, Menu, X } from 'lucide-react';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
 
 
 export default function Home() {
@@ -247,6 +248,7 @@ export default function Home() {
        <Skills darkMode={darkMode} />
        <Projects darkMode={darkMode} />
        <Contact darkMode={darkMode} />
+       <Footer darkMode={darkMode} />
     </>
   );
 }
