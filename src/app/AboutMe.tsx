@@ -45,9 +45,9 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                   viewport={{ once: true }}
                   className="text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
                 >
-                  Hi, I'm{" "}
+                  {"Hi, I'm"}{" "}
                   <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                    John Aivanne
+                    John Aivanne Molato
                   </span>
                 </motion.h1>
 
@@ -71,17 +71,19 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
               className={`space-y-6 leading-relaxed text-lg ${darkMode ? "text-gray-300" : "text-slate-700"}`}
             >
               <p>
-                I'm a fresh graduate with a degree in Information Technology, passionate about building user-friendly web interfaces and ensuring software quality. 
-                I’m currently exploring opportunities as a Frontend Developer and QA Tester, driven by a love for clean code, design, and problem-solving.
+                {
+                  "I'm a fresh graduate with a degree in Information Technology, passionate about building user-friendly web interfaces and ensuring software quality. I'm currently exploring opportunities as a Frontend Developer and QA Tester, driven by a love for clean code, design, and problem-solving."
+                }
               </p>
-
               <p>
-                When I’m not practicing code, I’m busy throwing ranked games in Mobile Legends and Dota 2. (Divine 4 Peak Rank) I call it stress relief with extra steps.
+                {
+                  "When I'm not practicing code, I'm busy throwing ranked games in Mobile Legends and Dota 2. (Divine 4 Peak Rank) I call it stress relief with extra steps."
+                }
               </p>
-
               <p>
-                Though I'm not fully professional when it comes to coding — still proudly AI-dependent — I'm learning and improving every day. 
-                Slowly but surely, I'm exploring and mastering the tech stack I only know a little about.
+                {
+                  "Though I'm not fully professional when it comes to coding — still proudly AI-dependent — I'm learning and improving every day. Slowly but surely, I'm exploring and mastering the tech stack I only know a little about."
+                }
               </p>
             </motion.div>
           </motion.div>
@@ -125,7 +127,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                 className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl"
               >
                 <Image
-                  src="/meeeee.jpg"
+                  src="/placeholder.svg?height=500&width=400"
                   alt="Profile picture"
                   width={400}
                   height={500}
