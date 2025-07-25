@@ -127,7 +127,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                 className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl"
               >
                 <Image
-                  src="/placeholder.svg?height=500&width=400"
+                  src="/meeeee.jpg"
                   alt="Profile picture"
                   width={400}
                   height={500}
