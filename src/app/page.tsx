@@ -3,14 +3,16 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
+import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 
 
+
 export default function Home() {
-  const fullText = 'Aspiring Front-end Developer & Manual QA Tester';
+  const fullText = 'Ako ang nag-isip, si chatgpt ang nag-code.';
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
@@ -245,6 +247,7 @@ export default function Home() {
           &gt;
         </motion.a>
       </main>
+       <AboutMe darkMode={darkMode} />
        <Skills darkMode={darkMode} />
        <Projects darkMode={darkMode} />
        <Contact darkMode={darkMode} />
