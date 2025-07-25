@@ -1,4 +1,5 @@
 "use client"
+
 import { motion } from "framer-motion"
 import { MapPin } from "lucide-react"
 import Image from "next/image"
@@ -11,12 +12,12 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
   return (
     <section
       id="aboutme"
-      className={`py-24 px-4 min-h-screen flex items-center transition-colors duration-500 ${
+      className={`py-24 px-4 min-h-screen flex items-center transition-colors duration-500 overflow-x-hidden ${
         darkMode ? "bg-[#0f172a] text-white" : "bg-white text-black"
       }`}
     >
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -33,7 +34,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                 viewport={{ once: true }}
                 className={`flex items-center gap-2 ${darkMode ? "text-gray-400" : "text-slate-500"}`}
               >
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4 flex-shrink-0" />
                 <span className="text-sm font-medium">Puerto Princesa City, Palawan</span>
               </motion.div>
 
@@ -43,7 +44,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
+                  className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
                 >
                   {"Hi, I'm"}{" "}
                   <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -56,7 +57,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   viewport={{ once: true }}
-                  className={`text-xl lg:text-2xl font-light ${darkMode ? "text-gray-300" : "text-slate-600"}`}
+                  className={`text-lg sm:text-xl lg:text-2xl font-light ${darkMode ? "text-gray-300" : "text-slate-600"}`}
                 >
                   Aspiring Front-end Developer & Manual QA Tester
                 </motion.p>
@@ -68,7 +69,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
-              className={`space-y-6 leading-relaxed text-lg ${darkMode ? "text-gray-300" : "text-slate-700"}`}
+              className={`space-y-6 leading-relaxed text-base sm:text-lg ${darkMode ? "text-gray-300" : "text-slate-700"}`}
             >
               <p>
                 {
@@ -96,35 +97,35 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
             viewport={{ once: true }}
             className="lg:col-span-5 order-1 lg:order-2"
           >
-            <div className="relative mx-auto max-w-md">
-              {/* Decorative elements */}
+            <div className="relative mx-auto max-w-sm lg:max-w-md">
+              {/* Decorative elements - contained within bounds */}
               <div
-                className={`absolute -top-6 -left-6 w-64 h-64 rounded-full blur-3xl opacity-70 -z-10 ${
+                className={`absolute top-0 left-0 w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64 rounded-full blur-3xl opacity-70 -z-10 ${
                   darkMode
                     ? "bg-gradient-to-br from-blue-900/30 to-purple-900/30"
                     : "bg-gradient-to-br from-blue-100 to-purple-100"
                 }`}
               ></div>
               <div
-                className={`absolute -bottom-8 -right-8 w-64 h-64 rounded-full blur-3xl opacity-70 -z-10 ${
+                className={`absolute bottom-0 right-0 w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64 rounded-full blur-3xl opacity-70 -z-10 ${
                   darkMode
                     ? "bg-gradient-to-br from-blue-900/30 to-purple-900/30"
                     : "bg-gradient-to-br from-blue-100 to-purple-100"
                 }`}
               ></div>
 
-              {/* Border frame */}
+              {/* Border frame - adjusted positioning */}
               <div
-                className={`absolute inset-0 border-2 rounded-3xl -m-3 rotate-3 ${
+                className={`absolute inset-2 border-2 rounded-3xl rotate-3 ${
                   darkMode ? "border-gray-700" : "border-slate-200"
                 }`}
               ></div>
 
-              {/* Main image */}
+              {/* Main image container */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl"
+                className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl mx-4"
               >
                 <Image
                   src="/meeeee.jpg"
@@ -133,7 +134,6 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                   height={500}
                   className="object-cover w-full h-full"
                 />
-
                 {/* Gradient overlay */}
                 <div
                   className={`absolute inset-0 ${
