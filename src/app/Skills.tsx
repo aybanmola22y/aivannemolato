@@ -13,7 +13,10 @@ import {
   SiCss3,
   SiGit,
   SiMysql,
-  SiPython
+  SiPython,
+  SiFirebase,
+  SiShadcnui,
+  SiSupabase
 } from 'react-icons/si';
 
 interface SkillsProps {
@@ -26,6 +29,11 @@ interface TechSkill {
   color: string;
 }
 
+interface TechCategory {
+  title: string;
+  skills: TechSkill[];
+}
+
 interface WorkExperience {
   title: string;
   company: string;
@@ -33,19 +41,35 @@ interface WorkExperience {
   description: string;
 }
 
-const techSkills: TechSkill[] = [
-  { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-500' },
-  { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500' },
-  { name: 'React.js', icon: SiReact, color: 'text-cyan-400' },
-  { name: 'Next.js', icon: SiNextdotjs, color: 'text-white' },
-  { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-500' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
-  { name: 'PHP', icon: SiPhp, color: 'text-purple-500' },
-  { name: 'HTML', icon: SiHtml5, color: 'text-orange-500' },
-  { name: 'CSS', icon: SiCss3, color: 'text-blue-500' },
-  { name: 'Python', icon: SiPython, color: 'text-yellow-400' },
-  { name: 'Git', icon: SiGit, color: 'text-orange-600' },
-  { name: 'MySQL Workbench', icon: SiMysql, color: 'text-blue-600' },
+const techCategories: TechCategory[] = [
+  {
+    title: 'Web Development',
+    skills: [
+      { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
+      { name: 'Next.js', icon: SiNextdotjs, color: 'text-white' },
+      { name: 'Shadcn UI', icon: SiShadcnui, color: 'text-black-500'},
+      { name: 'React.js', icon: SiReact, color: 'text-cyan-400' },
+      { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-500' }
+    ]
+  },
+  {
+    title: 'Backend & Database',
+    skills: [
+      { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-500' },
+      { name: 'PHP', icon: SiPhp, color: 'text-purple-500' },
+      { name: 'Python', icon: SiPython, color: 'text-yellow-400' },
+      { name: 'MySQL', icon: SiMysql, color: 'text-blue-600' },
+      { name: 'Firebase', icon: SiFirebase, color: 'text-orange-500' },
+      { name: 'Supabase', icon: SiSupabase, color: 'text-orange-500' }
+    ]
+  },
+  {
+    title: 'Tools & Version Control',
+    skills: [
+      { name: 'Git', icon: SiGit, color: 'text-orange-600' },
+    ]
+  }
 ];
 
 const workExperiences: WorkExperience[] = [
@@ -108,6 +132,18 @@ export default function Skills({ darkMode }: SkillsProps) {
     }
   };
 
+  const categoryVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.05
+      }
+    }
+  };
+
   return (
     <section
       id="skills"
@@ -141,41 +177,63 @@ export default function Skills({ darkMode }: SkillsProps) {
               variants={itemVariants}
               className="text-2xl md:text-3xl font-semibold mb-8"
             >
-              Tech Stack
+              Technologies
             </motion.h3>
             
-            <motion.div
-              variants={containerVariants}
-              className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4"
-            >
-              {techSkills.map((skill, index) => (
+            <div className="space-y-8">
+              {techCategories.map((category, categoryIndex) => (
                 <motion.div
-                  key={skill.name}
-                  variants={cardVariants}
-                  whileHover={{ 
-                    scale: 1.05,
-                    transition: { duration: 0.2 }
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`${
-                    darkMode
-                      ? 'bg-[#1e293b] border-gray-700 hover:bg-[#334155]'
-                      : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
-                  } border rounded-lg p-3 sm:p-4 md:p-6 text-center transition-all duration-300 cursor-pointer group`}
+                  key={category.title}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={categoryVariants}
+                  className="space-y-4"
                 >
-                  <div className="flex flex-col items-center space-y-2 sm:space-y-3">
-                    <skill.icon 
-                      className={`w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 ${
-                        darkMode ? skill.color : skill.color
-                      } group-hover:scale-110 transition-transform duration-300`}
-                    />
-                    <span className="font-medium text-xs sm:text-sm md:text-base leading-tight">
-                      {skill.name}
-                    </span>
-                  </div>
+                  <motion.h4 
+                    variants={itemVariants}
+                    className={`text-lg font-semibold ${
+                      darkMode ? 'text-blue-400' : 'text-blue-600'
+                    }`}
+                  >
+                    {category.title}
+                  </motion.h4>
+                  
+                  <motion.div
+                    variants={containerVariants}
+                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3"
+                  >
+                    {category.skills.map((skill, index) => (
+                      <motion.div
+                        key={skill.name}
+                        variants={cardVariants}
+                        whileHover={{ 
+                          scale: 1.05,
+                          transition: { duration: 0.2 }
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`${
+                          darkMode
+                            ? 'bg-[#1e293b] border-gray-700 hover:bg-[#334155]'
+                            : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
+                        } border rounded-lg p-3 sm:p-4 text-center transition-all duration-300 cursor-pointer group`}
+                      >
+                        <div className="flex flex-col items-center space-y-2">
+                          <skill.icon 
+                            className={`w-6 h-6 md:w-7 md:h-7 ${
+                              darkMode ? skill.color : skill.color
+                            } group-hover:scale-110 transition-transform duration-300`}
+                          />
+                          <span className="font-medium text-xs sm:text-sm leading-tight">
+                            {skill.name}
+                          </span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </motion.div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </motion.div>
 
           {/* Work Experience Section */}
