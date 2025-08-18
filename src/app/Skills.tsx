@@ -16,7 +16,8 @@ import {
   SiPython,
   SiFirebase,
   SiShadcnui,
-  SiSupabase
+  SiSupabase,
+  SiGithub
 } from 'react-icons/si';
 
 interface SkillsProps {
@@ -26,7 +27,8 @@ interface SkillsProps {
 interface TechSkill {
   name: string;
   icon: React.ComponentType<{ className?: string }>;
-  color: string;
+  colorDark: string;
+  colorLight: string;
 }
 
 interface TechCategory {
@@ -43,31 +45,34 @@ interface WorkExperience {
 
 const techCategories: TechCategory[] = [
   {
-    title: 'Web Development',
+    title: 'Front-end Web Development',
     skills: [
-      { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500' },
-      { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
-      { name: 'Next.js', icon: SiNextdotjs, color: 'text-white' },
-      { name: 'Shadcn UI', icon: SiShadcnui, color: 'text-black-500'},
-      { name: 'React.js', icon: SiReact, color: 'text-cyan-400' },
-      { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-500' }
+      { name: 'TypeScript', icon: SiTypescript, colorDark: 'text-blue-500', colorLight: 'text-blue-600' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, colorDark: 'text-cyan-400', colorLight: 'text-cyan-500' },
+      { name: 'Next.js', icon: SiNextdotjs, colorDark: 'text-white', colorLight: 'text-gray-900' },
+      { name: 'Shadcn UI', icon: SiShadcnui, colorDark: 'text-white', colorLight: 'text-gray-900'},
+      { name: 'React.js', icon: SiReact, colorDark: 'text-cyan-400', colorLight: 'text-cyan-500' },
+      { name: 'JavaScript', icon: SiJavascript, colorDark: 'text-yellow-500', colorLight: 'text-yellow-600'},
+      { name: 'HTML5', icon: SiHtml5, colorDark: 'text-orange-500', colorLight: 'text-orange-600'},
+      { name: 'CSS3', icon: SiCss3, colorDark: 'text-blue-500', colorLight: 'text-blue-600'}
     ]
   },
   {
     title: 'Backend & Database',
     skills: [
-      { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-500' },
-      { name: 'PHP', icon: SiPhp, color: 'text-purple-500' },
-      { name: 'Python', icon: SiPython, color: 'text-yellow-400' },
-      { name: 'MySQL', icon: SiMysql, color: 'text-blue-600' },
-      { name: 'Firebase', icon: SiFirebase, color: 'text-orange-500' },
-      { name: 'Supabase', icon: SiSupabase, color: 'text-orange-500' }
+      { name: 'Node.js', icon: SiNodedotjs, colorDark: 'text-green-500', colorLight: 'text-green-600' },
+      { name: 'PHP', icon: SiPhp, colorDark: 'text-purple-500', colorLight: 'text-purple-600' },
+      { name: 'Python', icon: SiPython, colorDark: 'text-yellow-400', colorLight: 'text-yellow-600' },
+      { name: 'MySQL', icon: SiMysql, colorDark: 'text-blue-600', colorLight: 'text-blue-700' },
+      { name: 'Firebase', icon: SiFirebase, colorDark: 'text-orange-500', colorLight: 'text-orange-600' },
+      { name: 'Supabase', icon: SiSupabase, colorDark: 'text-green-400', colorLight: 'text-green-600' }
     ]
   },
   {
     title: 'Tools & Version Control',
     skills: [
-      { name: 'Git', icon: SiGit, color: 'text-orange-600' },
+      { name: 'Git', icon: SiGit, colorDark: 'text-orange-600', colorLight: 'text-orange-700' },
+      { name: 'Github', icon: SiGithub, colorDark: 'text-gray-300', colorLight: 'text-gray-800' }
     ]
   }
 ];
@@ -177,7 +182,7 @@ export default function Skills({ darkMode }: SkillsProps) {
               variants={itemVariants}
               className="text-2xl md:text-3xl font-semibold mb-8"
             >
-              Technologies
+              My Techstack
             </motion.h3>
             
             <div className="space-y-8">
@@ -221,7 +226,7 @@ export default function Skills({ darkMode }: SkillsProps) {
                         <div className="flex flex-col items-center space-y-2">
                           <skill.icon 
                             className={`w-6 h-6 md:w-7 md:h-7 ${
-                              darkMode ? skill.color : skill.color
+                              darkMode ? skill.colorDark : skill.colorLight
                             } group-hover:scale-110 transition-transform duration-300`}
                           />
                           <span className="font-medium text-xs sm:text-sm leading-tight">
