@@ -83,7 +83,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
               </p>
               <p>
                 {
-                  "Though I'm not fully professional when it comes to coding, I still proudly AI-dependent. I'm learning and improving every day. Slowly but surely, I'm exploring and mastering the tech stack I only know a little about."
+                  "Though I'm not fully professional when it comes to coding. I'm learning and improving every day. Slowly but surely, I'm exploring and mastering the tech stack I only know a little about."
                 }
               </p>
             </motion.div>
