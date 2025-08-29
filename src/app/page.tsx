@@ -293,23 +293,6 @@ export default function Home() {
             <span className="animate-pulse">|</span>
           </motion.p>
         </div>
-
-        {/* Scroll Down Symbol */}
-        <motion.button
-          onClick={() => smoothScrollTo('#aboutme')}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className={`absolute bottom-8 text-2xl md:text-3xl transform rotate-90 ${
-            darkMode ? 'text-white' : 'text-black'
-          } hover:scale-110 transition-transform`}
-        >
-          &gt;
-        </motion.button>
       </main>
       
       <AboutMe darkMode={darkMode} />
