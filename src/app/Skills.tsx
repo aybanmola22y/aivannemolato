@@ -45,7 +45,7 @@ interface WorkExperience {
 
 const techCategories: TechCategory[] = [
   {
-    title: 'Front-end Web Development',
+    title: 'Frontend Web Development',
     skills: [
       { name: 'TypeScript', icon: SiTypescript, colorDark: 'text-blue-500', colorLight: 'text-blue-600' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, colorDark: 'text-cyan-400', colorLight: 'text-cyan-500' },

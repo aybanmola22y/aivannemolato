@@ -59,7 +59,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                   viewport={{ once: true }}
                   className={`text-lg sm:text-xl lg:text-2xl font-light ${darkMode ? "text-gray-300" : "text-slate-600"}`}
                 >
-                  Aspiring Front-end Developer & Manual QA Tester
+                  Frontend Developer & Manual QA Tester
                 </motion.p>
               </div>
             </div>
