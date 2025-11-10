@@ -128,7 +128,7 @@ export default function AboutMe({ darkMode }: AboutMeProps) {
                 className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl mx-4"
               >
                 <Image
-                  src="/meeeee.jpg"
+                  src="/933f0fb0-67ec-4ed4-aa8c-22c34820c4ea.jpg"
                   alt="Profile picture"
                   width={400}
                   height={500}
