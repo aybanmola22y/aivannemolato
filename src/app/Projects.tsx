@@ -40,25 +40,11 @@ export default function Projects({ darkMode }: ProjectsProps) {
     },
     {
       id: 4,
-      title: "OJT Time Logging",
+      title: "786 SG",
       description:
-        "OJT Time Logging is a project designed to help track and manage the time spent during on-the-job training.",
-      image: "/images/ojt-time-logging.jpg",
-      demoUrl: "https://ojt-log.vercel.app/",
-    },
-    {
-      id: 5,
-      title: "Book of Love",
-      description: "Book of Love is an online diary that serves as a digital scrapbook of cherished memories.",
-      image: "/images/book-of-love.jpg",
-      demoUrl: "https://book-of-love.vercel.app/",
-    },
-    {
-      id: 6,
-      title: "Virtual Cake",
-      description: "Virtual Cake is an interactive web app that lets a person experience a digital cake.",
-      image: "/images/virtual-cake.jpg",
-      demoUrl: "https://hbd-po.vercel.app/",
+        "786 SG is a trusted halal meat supplier based in Singapore, providing fresh, high-quality, and ethically sourced halal meats for businesses and households.",
+      image: "/images/786-sg.jpg",
+      demoUrl: "786-sg.vercel.app/",
     },
   ]
 
@@ -66,7 +52,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
+      transition: {7
         staggerChildren: 0.2,
       },
     },
