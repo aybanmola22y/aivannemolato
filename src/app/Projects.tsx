@@ -40,11 +40,11 @@ export default function Projects({ darkMode }: ProjectsProps) {
     },
     {
       id: 4,
-      title: "786 SG",
+      title: "OJT Time Logging",
       description:
-        "786 SG is a trusted halal meat supplier based in Singapore, providing fresh, high-quality, and ethically sourced halal meats for businesses and households.",
-      image: "/images/786-sg.jpg",
-      demoUrl: "786-sg.vercel.app/",
+        "OJT Time Logging is a project designed to help track and manage the time spent during on-the-job training.",
+      image: "/images/ojt-time-logging.jpg",
+      demoUrl: "https://ojt-log.vercel.app/",
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {7
+      transition: {
         staggerChildren: 0.2,
       },
     },
