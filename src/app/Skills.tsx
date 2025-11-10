@@ -86,7 +86,7 @@ const workExperiences: WorkExperience[] = [
   },
   {
     title: 'Freelance Web Developer',
-    company: 'Nova North SG (786 SG PTE. LTD. Singapore',
+    company: 'Nova North SG (786 SG PTE. LTD. Singapore)',
     period: '2024 - Present',
     description: 'Recreate their business website with a modern design and improved UI/UX to enhance user engagement, accessibility, and overall browsing experience.'
   },
