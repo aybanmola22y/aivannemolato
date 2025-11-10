@@ -50,7 +50,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
       id: 5,
       title: "RentConnect",
       description:
-        "RentConnect is a mobile application designed to connect landlords and occupants in a seamless and efficient way. It simplifies rental management by allowing landlords to post properties, monitor rent payments, and manage tenant information, while occupants can easily pay rent, send maintenance requests, and communicate directly with their landlords",
+        "RentConnect is a mobile application designed to connect landlords and occupants in a seamless and efficient way. It simplifies rental management by allowing landlords to post properties, monitor rent payments, and manage tenant information, while occupants can easily pay rent, send maintenance requests, and communicate directly with their landlords.",
       image: "/images/ojt-time-logging.jpg",
       demoUrl: "https://apkpure.com/rentconnect/com.example.rentcon",
     },
