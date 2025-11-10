@@ -10,7 +10,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 
 export default function Home() {
-  const fullText = 'Ako ang nag-isip, si chatgpt ang nag-code.';
+  const fullText = 'Turning imagination into functional design.';
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
