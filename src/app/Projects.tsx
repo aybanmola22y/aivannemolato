@@ -46,20 +46,6 @@ export default function Projects({ darkMode }: ProjectsProps) {
       image: "/images/ojt-time-logging.jpg",
       demoUrl: "https://786-sg.vercel.app/",
     },
-    {
-      id: 5,
-      title: "Book of Love",
-      description: "Book of Love is an online diary that serves as a digital scrapbook of cherished memories.",
-      image: "/images/book-of-love.jpg",
-      demoUrl: "https://book-of-love.vercel.app/",
-    },
-    {
-      id: 6,
-      title: "Virtual Cake",
-      description: "Virtual Cake is an interactive web app that lets a person experience a digital cake.",
-      image: "/images/virtual-cake.jpg",
-      demoUrl: "https://hbd-po.vercel.app/",
-    },
   ]
 
   const containerVariants = {
