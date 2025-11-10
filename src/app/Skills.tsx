@@ -81,26 +81,26 @@ const workExperiences: WorkExperience[] = [
   {
     title: 'Part-Time Data Encoder',
     company: 'Lifesavers Drugtesting Center',
-    period: '2025 - Present',
+    period: 'July 2025 - August 2025',
     description: 'Responsible for encoding clients personal information into the system.'
   },
   {
-    title: 'Part-Time Data Encoder',
-    company: 'Lifesavers Drugtesting Center',
-    period: '2025 - Present',
-    description: 'Responsible for encoding clients personal information into the system.'
+    title: 'Freelance Web Developer',
+    company: 'Nova North SG (786 SG PTE. LTD. Singapore',
+    period: '2024 - Present',
+    description: 'Recreate their business website with a modern design and improved UI/UX to enhance user engagement, accessibility, and overall browsing experience.'
   },
   {
-    title: 'Part-Time Data Encoder',
-    company: 'Lifesavers Drugtesting Center',
+    title: 'Service Associate (Oncall)',
+    company: 'Princesa Garden Island Resort and Spa',
     period: '2025 - Present',
-    description: 'Responsible for encoding clients personal information into the system.'
+    description: 'Provides excellent customer service by preparing tables with proper cutlery, serving food and drinks, and ensuring a clean and welcoming dining environment.'
   },
   {
-    title: 'Part-Time Data Encoder',
-    company: 'Lifesavers Drugtesting Center',
-    period: '2025 - Present',
-    description: 'Responsible for encoding clients personal information into the system.'
+    title: 'Capstone Frontend Designer',
+    company: 'Capstone 2',
+    period: '2024',
+    description: 'Responsible for designing our User Interface for Capstone Project.'
   }
 ];
 
